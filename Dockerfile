@@ -13,4 +13,4 @@ ENV DEFAULT_ARTIFACT_ROOT=/opt/artifact
 
 EXPOSE 80
 
-ENTRYPOINT ["sh", "-c", "mlflow server --host 0.0.0.0 --port 80 --backend-store-uri $BACKEND_STORE_URI --default-artifact-root $DEFAULT_ARTIFACT_ROOT"]
+CMD ["sh", "-c", "mlflow server --host 0.0.0.0 --port 80 --backend-store-uri $BACKEND_STORE_URI --default-artifact-root $DEFAULT_ARTIFACT_ROOT"]
