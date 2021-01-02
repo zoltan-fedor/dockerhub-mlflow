@@ -14,6 +14,6 @@ When after a version upgrade the MLFlow container errors out, then check out the
 Frequently new versions require a database schema upgrade, so you need to call the new version with
 the `db upgrade` SQLAlchemy command while pointing to the MySQL instance:
 ```
-$ k run  -i --tty --rm debug --image=evk02/mlflow:1.13.1 --restart=Never \
+$ kubectl run  -i --tty --rm debug --image=evk02/mlflow:1.13.1 --restart=Never \
 -- sh -c 'mlflow db upgrade [db uri]'
 ```
