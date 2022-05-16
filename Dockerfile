@@ -1,4 +1,4 @@
-FROM python:3.8.11-slim
+FROM python:3.8.13-slim
 
 # required by mysqclient
 RUN apt-get update -y && \
@@ -6,7 +6,7 @@ RUN apt-get update -y && \
 
 RUN pip install PyMySQL==0.10.1 mysqlclient==2.0.3 && \   
     pip install psycopg2-binary==2.8.6 && \
-    pip install mlflow[extras]==1.25.1
+    pip install mlflow[extras]==1.26.0
 
 ENV BACKEND_STORE_URI=
 ENV DEFAULT_ARTIFACT_ROOT=/opt/artifact
