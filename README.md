@@ -6,7 +6,9 @@ You can find this image on DockerHub under https://hub.docker.com/r/evk02/mlflow
 
 ## Helm chart
 
-This Docker image is recommended to be used with Helm chart https://artifacthub.io/packages/helm/cetic/mlflow
+This Docker image is recommended to be used with Helm chart https://github.com/zoltan-fedor/helm-mlflow,
+which is implementing "Scenario 5" (MLflow Tracking Server enabled with proxied artifact storage access
+) from https://www.mlflow.org/docs/latest/tracking.html.
 
 ## Upgrade
 
