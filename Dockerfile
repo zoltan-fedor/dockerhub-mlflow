@@ -13,4 +13,4 @@ ENV DEFAULT_ARTIFACT_ROOT=/opt/artifact
 
 EXPOSE 80
 
-CMD ["sh", "-c", "mlflow server --host 0.0.0.0 --port 80 --backend-store-uri $BACKEND_STORE_URI --artifacts-destination $ARTIFACTS_DESTINATION --serve-artifacts"]
+CMD ["sh", "-c", "mlflow server --host 0.0.0.0 --port 80 --gunicorn-opts \"$GUNICORN_OPTS\" --backend-store-uri $BACKEND_STORE_URI --artifacts-destination $ARTIFACTS_DESTINATION --serve-artifacts"]
